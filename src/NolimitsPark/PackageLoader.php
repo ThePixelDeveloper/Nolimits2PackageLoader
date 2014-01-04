@@ -28,7 +28,10 @@ class PackageLoader
      */
     public static function createFactory($filename)
     {
-        return new static((new \ZipArchive())->open($filename));
+        $zip = new \ZipArchive();
+        $zip->open($filename);
+
+        return new static($zip);
     }
 
     /**
