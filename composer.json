@@ -1,0 +1,21 @@
+{
+    "name": "ThePixelDeveloper/NoLimitsCoaster2PackageLoader",
+    "description": "A file parser for the nl2pkg format",
+    "minimum-stability": "rc",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Mathew Davies",
+            "email": "thepixeldeveloper@googlemail.com"
+        }
+    ],
+    "require-dev": {
+        "phpspec/phpspec": "~2.0"
+    },
+    "autoload": {
+        "psr-0": {"": "src/"}
+    },
+    "config": {
+        "bin-dir": "bin/"
+    }
+}
