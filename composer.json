@@ -1,5 +1,5 @@
 {
-    "name": "ThePixelDeveloper/NoLimitsCoaster2PackageLoader",
+    "name": "thepixeldeveloper/nolimitscoaster2packageloader",
     "description": "A file parser for the nl2pkg format",
     "minimum-stability": "rc",
     "license": "proprietary",
