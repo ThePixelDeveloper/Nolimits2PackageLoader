@@ -41,6 +41,5 @@ License
 Copyright 2013 Mathew Davies
 
 The Nolimits Coaster 2 Package Loader was written by Mathew Davies
-with the permissions of the No Limits Development Team for their
-explicit use. Use of this code without the permission of Ole Lange
-or the No Limits Development Team is strictly prohibited.
+with the permissions of the No Limits Development Team for Nolimits Exchange.
+Use of this code without the permission of Mathew Davies is strictly prohibited.
