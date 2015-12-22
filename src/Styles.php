@@ -1,20 +1,31 @@
 <?php
 
-namespace NolimitsPark;
+namespace Thepixeldeveloper\Nolimits2PackageLoader;
 
-class CoasterStyleTypes
+/**
+ * Class Styles
+ *
+ * Map of all the coaster types. Key is the type ID and the value
+ * is the user facing label.
+ *
+ * @package Thepixeldeveloper\Nolimits2PackageLoader
+ */
+class Styles
 {
-    protected $types = [
-        0 => 'Schwarzkopf Thriller (Classic)',
-        1 => 'Arrow Corkscrew',
-        2 => 'Vekoma SLC',
-        3 => 'B&M Sitdown',
-        4 => 'B&M Inverted',
-        5 => 'Intamin Hyper',
-        6 => 'B&M Floorless',
-        7 => 'B&M standup',
-        8 => 'B&M Hyper',
-        9 => 'GCI Millennium Flyer',
+    /**
+     * @var array
+     */
+    protected $styles = [
+        0  => 'Schwarzkopf Thriller (Classic)',
+        1  => 'Arrow Corkscrew',
+        2  => 'Vekoma SLC',
+        3  => 'B&M Sitdown',
+        4  => 'B&M Inverted',
+        5  => 'Intamin Hyper',
+        6  => 'B&M Floorless',
+        7  => 'B&M standup',
+        8  => 'B&M Hyper',
+        9  => 'GCI Millennium Flyer',
         10 => 'PTC 4 Seat',
         11 => 'PTC 6 Seat',
         12 => 'Morgan Trailered',
@@ -44,8 +55,21 @@ class CoasterStyleTypes
         71 => 'Gravity Group Timberliner',
     ];
 
-    public function getCoasterStyles()
+    /**
+     * @return array
+     */
+    public function getStyles()
     {
-        return $this->types;
+        return $this->styles;
+    }
+
+    /**
+     * @param  integer $styleId
+     *
+     * @return string
+     */
+    public function getLabel($styleId)
+    {
+        return $this->styles[$styleId];
     }
 }
