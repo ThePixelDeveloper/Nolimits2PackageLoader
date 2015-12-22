@@ -8,7 +8,7 @@ Thepixeldeveloper\Nolimits2PackageLoader
 [![Total Downloads](https://img.shields.io/packagist/dt/thepixeldeveloper/nolimitscoaster2packageloader.svg)](https://packagist.org/packages/thepixeldeveloper/nolimitscoaster2packageloader)
 [![SensioLabsInsight](https://img.shields.io/sensiolabs/i/ed6d56e8-c908-44dc-9154-a8edc8b168bc.svg)](https://insight.sensiolabs.com/projects/ed6d56e8-c908-44dc-9154-a8edc8b168bc)
 
-When given a package file (nlpkg) produced by [No Limits Coaster 2](http://www.nolimitscoaster.com/) will return information about the park and roller coasters.
+When given a nlpkg produced by [No Limits Coaster 2](http://www.nolimitscoaster.com/) this library will return information about the park and roller coasters.
 
 Basic Usage
 -----
