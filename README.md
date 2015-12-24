@@ -7,7 +7,7 @@ Thepixeldeveloper\Nolimits2PackageLoader
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
 [![Packagist Version](https://img.shields.io/packagist/v/thepixeldeveloper/nolimits2packageloader.svg)](https://packagist.org/packages/thepixeldeveloper/nolimits2packageloader)
 [![Total Downloads](https://img.shields.io/packagist/dt/thepixeldeveloper/nolimits2packageloader.svg)](https://packagist.org/packages/thepixeldeveloper/nolimits2packageloader)
-[![SensioLabsInsight](https://img.shields.io/sensiolabs/i/ed6d56e8-c908-44dc-9154-a8edc8b168bc.svg)](https://insight.sensiolabs.com/projects/ed6d56e8-c908-44dc-9154-a8edc8b168bc)
+[![SensioLabsInsight](https://img.shields.io/sensiolabs/i/71e1a221-f477-4649-b63f-c61a055fa0be.svg)](https://insight.sensiolabs.com/projects/71e1a221-f477-4649-b63f-c61a055fa0be)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/ThePixelDeveloper/Nolimits2PackageLoader/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/ThePixelDeveloper/Nolimits2PackageLoader/?branch=develop)
 
 When given a nlpkg produced by [No Limits Coaster 2](http://www.nolimitscoaster.com/) this library will return information about the park and roller coasters.
