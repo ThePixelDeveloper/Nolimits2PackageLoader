@@ -18,23 +18,30 @@ Basic Usage
 **Did you know?** _A nlpkg file is the same as a ZIP file_
 
 ``` php
-$package = PackageLoader::createFactory('/path/to/park.nlpkg');
+// First load the package using ZipArchive
+$zip = new \ZipArchive;
+$zip->open('raptor.nl2pkg');
 
-// Basic park information
-$information = $package->getParkInformation();
-$information->getAuthor();
+// Then give it to the package class to parse into useful information.
+$package = new Thepixeldeveloper\Nolimits2PackageLoader\Package($zip);
 
-// Raw preview image data
-$image = $package->getPreviewImage();
+/**
+ * Instance of Thepixeldeveloper\Nolimits2PackageLoader\Park
+ *
+ * Contains information like the author and description.
+ */
+$parkInformation = $package->getParkInformation();
 
-// Raw NL2 park data
-$park = $package->getParkFile();
-
-// Coaster information (Iterator)
+/**
+ * Instance of Thepixeldeveloper\Nolimits2PackageLoader\Coasters
+ *
+ * Gives you an iterator which returns Coaster objects
+ */
 $coasters = $package->getCoasters();
 
-foreach ($coasters as $coaster) {
-    $name = $coaster->getName();
-    $type = $coaster->getCoasterType(new CoasterStyleTypes);
-}
+/**
+ * Examples of reading the preview image and park file
+ */
+$previewImage = $package->getPreviewImageStream();
+$parkFile     = $package->getParkFileStream();
 ```
