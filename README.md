@@ -26,6 +26,12 @@ $zip->open('raptor.nl2pkg');
 $package = new Thepixeldeveloper\Nolimits2PackageLoader\Package($zip);
 
 /**
+ * Examples of reading the preview image and park file
+ */
+$previewImage = $package->getPreviewImageStream();
+$parkFile     = $package->getParkFileStream();
+
+/**
  * Instance of Thepixeldeveloper\Nolimits2PackageLoader\Park
  *
  * Contains information like the author and description.
@@ -47,10 +53,4 @@ $coaster = $coasters->current();
 $coaster->getStyle();          // Mack Launch
 $coaster->getName();           // Raptor
 $coaster->getNumberOfTrains(); // 1
-
-/**
- * Examples of reading the preview image and park file
- */
-$previewImage = $package->getPreviewImageStream();
-$parkFile     = $package->getParkFileStream();
 ```
