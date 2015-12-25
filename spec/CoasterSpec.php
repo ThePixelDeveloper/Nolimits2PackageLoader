@@ -5,10 +5,11 @@ namespace spec\Thepixeldeveloper\Nolimits2PackageLoader;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 use SimpleXMLElement;
+use Thepixeldeveloper\Nolimits2PackageLoader\Styles;
 
 class CoasterSpec extends ObjectBehavior
 {
-    function let()
+    function let(Styles $styles)
     {
         $data = <<<XML
 <coaster>
@@ -24,7 +25,7 @@ XML;
 
         $simpleXMLElement = new SimpleXMLElement($data);
 
-        $this->beConstructedWith($simpleXMLElement);
+        $this->beConstructedWith($simpleXMLElement, $styles);
     }
 
     function it_is_initializable()
@@ -40,6 +41,13 @@ XML;
     function it_should_return_the_coaster_style_id()
     {
         $this->getStyleId()->shouldReturn(62);
+    }
+
+    function it_should_return_the_coaster_style(Styles $styles)
+    {
+        $styles->getLabel(62)->willReturn('Mack Launch');
+
+        $this->getStyle()->shouldReturn('Mack Launch');
     }
 
     function it_should_return_the_number_of_trains()

@@ -56,7 +56,7 @@ class Package
     public function getCoasters()
     {
         if ($this->coasters === null) {
-            $this->coasters = new Coasters($this->getParkXml());
+            $this->coasters = new Coasters($this->getParkXml(), new Styles());
         }
 
         return $this->coasters;

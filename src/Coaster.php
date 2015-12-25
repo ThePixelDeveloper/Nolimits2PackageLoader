@@ -17,13 +17,20 @@ class Coaster
     protected $coasterXML;
 
     /**
+     * @var Styles
+     */
+    protected $styles;
+
+    /**
      * Park constructor.
      *
      * @param SimpleXMLElement $simpleXMLElement
+     * @param Styles $styles
      */
-    public function __construct(SimpleXMLElement $simpleXMLElement)
+    public function __construct(SimpleXMLElement $simpleXMLElement, Styles $styles)
     {
         $this->coasterXML = $simpleXMLElement;
+        $this->styles = $styles;
     }
 
     /**
@@ -40,6 +47,14 @@ class Coaster
     public function getStyleId()
     {
         return (int) $this->coasterXML->coasterstyleid;
+    }
+
+    /**
+     * @return string
+     */
+    public function getStyle()
+    {
+        return $this->styles->getLabel($this->getStyleId());
     }
 
     /**

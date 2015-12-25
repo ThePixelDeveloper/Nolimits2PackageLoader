@@ -5,10 +5,11 @@ namespace spec\Thepixeldeveloper\Nolimits2PackageLoader;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 use SimpleXMLElement;
+use Thepixeldeveloper\Nolimits2PackageLoader\Styles;
 
 class CoastersSpec extends ObjectBehavior
 {
-    function let()
+    function let(Styles $styles)
     {
         $data = <<<XML
 <park>
@@ -35,7 +36,7 @@ XML;
 
         $simpleXMLElement = new SimpleXMLElement($data);
 
-        $this->beConstructedWith($simpleXMLElement);
+        $this->beConstructedWith($simpleXMLElement, $styles);
     }
 
     function it_is_initializable()

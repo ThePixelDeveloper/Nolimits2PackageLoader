@@ -23,12 +23,19 @@ class Coasters implements Iterator, Countable
     protected $parkXML;
 
     /**
+     * @var Styles
+     */
+    protected $styles;
+
+    /**
      * Coasters constructor.
      * @param SimpleXMLElement $parkXML
+     * @param Styles $styles
      */
-    public function __construct(SimpleXMLElement $parkXML)
+    public function __construct(SimpleXMLElement $parkXML, Styles $styles)
     {
         $this->parkXML = $parkXML;
+        $this->styles = $styles;
     }
 
     /**
@@ -36,7 +43,7 @@ class Coasters implements Iterator, Countable
      */
     public function current()
     {
-        return new Coaster($this->parkXML->coaster[$this->position]);
+        return new Coaster($this->parkXML->coaster[$this->position], $this->styles);
     }
 
     /**
