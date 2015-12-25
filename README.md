@@ -40,6 +40,15 @@ $parkInformation = $package->getParkInformation();
 $coasters = $package->getCoasters();
 
 /**
+ * Instance of Thepixeldeveloper\Nolimits2PackageLoader\Coaster
+ */
+$coaster = $coasters->current();
+
+$coaster->getStyle();          // Mack Launch
+$coaster->getName();           // Raptor
+$coaster->getNumberOfTrains(); // 1
+
+/**
  * Examples of reading the preview image and park file
  */
 $previewImage = $package->getPreviewImageStream();
